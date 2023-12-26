@@ -4,8 +4,8 @@
 }
 .profile{
     position: absolute;
-    top: 7.5vw;
-    left: 3vw;
+    top: 4.5vw;
+    left: 6vw;
 }
 .profile-photo {
     width: 10vw;
@@ -14,12 +14,17 @@
     border-radius: 50%;
   }
 
-  @media (max-width:576px) {
-    
-    .profile{
-        position: absolute;
+  @media (max-width: 1207px) {
+    .profile {
+        top: 15.5vh;
+        left: 6vw;
+    }
+
+    .profile-photo {
+        width: 80px; 
+        height: 80px; 
         top: 16.5vh;
-        left: 3vw;
+        left: 3vw; 
     }
 
   }
