@@ -3,6 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Profile from './Components/Profile/Profile';
 import SidebarRight from './Components/SidebarRight/SidebarRight';
+import Login from './Components/login/login';
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/profile" element={<Profile />} />
           <Route path="/sidebar" element={<SidebarRight />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </div>
