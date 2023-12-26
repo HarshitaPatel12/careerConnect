@@ -13,6 +13,27 @@
     object-fit: cover;
     border-radius: 50%;
   }
+.username{
+  margin-left: 2.5vw;
+  justify-content: 'space-between'
+}
+  .skill-btn{
+    border: 1px solid grey;
+    width: fit-content;
+    display: flex;
+    font-size: 18px;
+    margin-top: 2rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    background: white;
+    color: var(--ligth-black);
+  }
+  .company-logo {
+    width: 2vw;
+    height: 2vw;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 
   @media (max-width: 1207px) {
     .profile {
@@ -25,6 +46,12 @@
         height: 80px; 
         top: 16.5vh;
         left: 3vw; 
+    }
+    .company-logo {
+      width: 2vw;
+      height: 2vw;
+      object-fit: cover;
+      border-radius: 50%;
     }
 
   }
