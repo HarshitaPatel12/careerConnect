@@ -63,7 +63,7 @@ function Profile() {
                 <CardContent>
                     <Typography variant="subtitle1" component="div">
                       Your Name | Company Name | Address: Your Address
-                      <button type="button" class="btn btn-secondary">Edit</button>                    </Typography>
+                      <button type="button" class="btn btn-success">Edit</button>                    </Typography>
                     
                      {/* <Typography variant="subtitle1" component="div"sx={{ display: 'flex', justifyContent: 'space-between' }}>
  <span sx={{marginLeft: "3vh"}}> Your Name | Company Name | Address: Your Address</span>
