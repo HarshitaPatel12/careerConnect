@@ -54,7 +54,7 @@ const Navbar = () => {
 
  const navigate = useNavigate()
  const handleProfile =()=>{
-  navigate("/profile/:id");
+  navigate("/profile");
  }
  const handleHome =()=>{
   navigate("/");
