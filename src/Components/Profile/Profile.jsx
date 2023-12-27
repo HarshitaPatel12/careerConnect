@@ -34,6 +34,7 @@ function Profile() {
 
   const [value, setValue] = React.useState('1');
   const [showAddSkill, setShowAddSkill] = useState(false);
+  const [showAddExperience, setShowAddExperience] = useState(false);
   const [skill, setSkill] = useState("")
   const [experiences, setExperiences] = useState("");
   const handleChange = (event, newValue) => {
@@ -41,6 +42,9 @@ function Profile() {
   };
   const handleAddSkillToggle = () => {
     setShowAddSkill(!showAddSkill);
+  };
+  const handleAddExperienceToggle = () => {
+    setShowAddExperience(!showAddExperience);
   };
   const handleSkill = (e) => {
     setSkill(e.target.value)
@@ -74,84 +78,201 @@ function Profile() {
                   <span className="fw-bold username "> name</span>
                   {/* <button type="button" className="btn btn-secondary">Edit</button> */}
                 </Typography>
+                <Typography className="d-flex justify-align-left userinfo" variant="subtitle1" component="div">
+                  Designation
+                  {/* <button type="button" class="btn btn-secondary">Edit</button> */}
+                </Typography>
               </CardContent>
-              <Box sx={{ width: '100%', typography: 'body1' }}>
-                <TabContext value={value}>
-                  <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList onChange={handleChange} aria-label="lab API tabs example">
-                      <Tab label="Skills" value="1" />
-                      <Tab label="Experience" value="2" />
-                      <Tab label="Resume" value="3" />
-                      <Tab label="About" value="4" />
-                    </TabList>
-                  </Box>
-                  <TabPanel value="1">
-                    <Card className="p-4">
-                      <Typography variant="subtitle1" component="div">
-                        <div className="d-flex justify-content-between">
-                          <span className="fs-3 text-dark">Skills</span>
-                          <span className="ms-auto fs-2"><AddIcon onClick={handleAddSkillToggle} /></span>
-                        </div>
-                        <span className="skill-btn ">HTML</span>
-                      </Typography>
 
-                    </Card>
-                    {showAddSkill && (
-                      <Card className="p-4 mt-2">
 
-                        <div className="justify-content-left d-flex">
-                          <span className="fs-3 text-dark">Add Skill*</span>
-                        </div>
-                        <div className="d-flex">
-                          <div className="col-md-8">
-                            <input type="text" className="form-control" value={skill} onChange={handleSkill} />
-                          </div>
-                          <div className="ms-auto">
-                            <button type="button" className="btn btn-success">
-                              Add
-                            </button>
-                          </div>
-                        </div>
+            </div>
+          </Item>
+          <Card sx={{ marginTop: "10px" }}>
+            <Box sx={{ width: '100%', typography: 'body1' }}>
+              <TabContext value={value}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                  <TabList onChange={handleChange} aria-label="lab API tabs example">
+                    <Tab label="Skills" value="1" />
+                    <Tab label="Experience" value="2" />
+                    <Tab label="Resume" value="3" />
+                    <Tab label="About" value="4" />
+                  </TabList>
+                </Box>
+                <TabPanel value="1">
+                  <Card className="p-4">
+                    <Typography variant="subtitle1" component="div">
+                      <div className="d-flex justify-content-between">
+                        <span className="fs-3 text-dark">Skills</span>
+                        <span className="ms-auto fs-2"><AddIcon onClick={handleAddSkillToggle} /></span>
+                      </div>
+                      <span className="skill-btn ">HTML</span>
+                    </Typography>
 
-                      </Card>
-                    )}
+                  </Card>
 
-                  </TabPanel>
-                  <TabPanel value="2">
-                    <Card className="p-4">
-                      <Typography variant="subtitle1" component="div">
-                        <div className="d-flex justify-content-between">
-                          <span className="fs-3 text-dark">Experience</span>
-                          <span className="ms-auto fs-2"><AddIcon onClick={handleAddSkillToggle} /></span>
-                        </div>
-                      </Typography>
-                      <hr />
-                      <div className="d-flex justify-content-left">
-                        <div className="">
-                          <img
-                            src="https://st2.depositphotos.com/1065578/7533/i/450/depositphotos_75333451-stock-photo-abstract-geometric-company-logo.jpg"
-                            alt="Profile"
-                            className="company-logo"
+                  {/* Add skills card start */}
+                  {showAddSkill && (
+                    <Card className="p-4 mt-2">
 
-                          />
+                      <div className="justify-content-left d-flex">
+                        <span className="fs-3 text-dark">Add Skill*</span>
+                      </div>
+                      <div className="d-flex">
+                        <div className="col-md-8">
+                          <input type="text" className="form-control" value={skill} onChange={handleSkill} />
                         </div>
-                        <span className="fw-bold mt-2">Data Engineer</span>
+                        <div className="ms-auto">
+                          <button type="button" className="btn btn-success">
+                            Add
+                          </button>
+                        </div>
                       </div>
 
                     </Card>
-                  </TabPanel>
-                  <TabPanel value="3">
+                  )}
+                  {/* Add skills card end */}
+                </TabPanel>
+                <TabPanel value="2">
+                  <Card className="p-4">
+                    <Typography variant="subtitle1" component="div">
+                      <div className="d-flex justify-content-between">
+                        <span className="fs-3 text-dark">Experience</span>
+                        <span className="ms-auto fs-2"><AddIcon onClick={handleAddExperienceToggle} /></span>
+                      </div>
 
-                  </TabPanel>
-                </TabContext>
-              </Box>
+                    </Typography>
+                    <hr />
+                    <div className="d-flex justify-content-left">
+                      <div className="">
+                        <img
+                          src="https://st2.depositphotos.com/1065578/7533/i/450/depositphotos_75333451-stock-photo-abstract-geometric-company-logo.jpg"
+                          alt="Profile"
+                          className="company-logo"
 
+                        />
+                      </div>
+                      <span className="fw-bold mt-2">Data Engineer</span>
+                    </div>
+
+                  </Card>
+                  {/* Add experiences card start */}
+                  {showAddExperience && (
+                    <Card className="p-4 mt-2">
+
+                      <div className="justify-content-left d-flex">
+                        <span className="fs-3 text-dark">Add Experience</span>
+                        <div className="ms-auto">
+                          <button type="button" className="btn btn-success">
+                            Add
+                          </button>
+                        </div>
+                      </div>
+                     
+                   
+                      <div className="box">
+        
+          <div className="row d-flex justify-content-left   col">
+            <div className="col-md-4 mt-3">
+              <select
+                type="text"
+                className="form-select border"
+                placeholder="Title"
+              >
+                <option disabled>Job Title*</option>
+                </select>
             </div>
+            
+            <div className="col-md-4 mt-3">
+              <input
+                type="text"
+                className="form-control border "
+                placeholder="First Name"
+              />
+            </div>
+           
+            <div className="col-md-4 mt-3">
+              <input
+                type="text"
+                className="form-control border "
+                placeholder="Employement Type"
+              />
+            </div>
+          </div>
+          <div className="row d-flex justify-content-left   col">
+            <div className="col-md-4 mt-3">
+              <input
+                type="text"
+                className="form-control border"
+                placeholder="Company Name"
+              />
+            </div>
+            
+            <div className="col-md-4 mt-3">
+              <input
+                type="text"
+                className="form-control border"
+                placeholder="Location"
+              />
+            </div>
+           
+            <div className="col-md-4 mt-3">
+              <input
+                type="text"
+                className="form-control border "
+                placeholder="Location Type"
+              />
+            </div>
+          </div>
+          <div className="row d-flex justify-content-left   col">
+            <div className="col-md-4 mt-3">
+              <input
+                type="date"
+                className="form-control border"
+                placeholder="Start Date"
+              />
+            </div>
+            
+            <div className="col-md-4 mt-3">
+              <input
+                type="Date"
+                className="form-control border"
+                placeholder="End Date"
+              />
+            </div>
+           
+            <div className="col-md-4 mt-3">
+              <input
+                type="text"
+                className="form-control border "
+                placeholder="Industry"
+              />
+            </div>
+           <div><textarea className="col-md-12 mt-3 py-1 " rows={5}></textarea></div>
+            
+            
+          </div>
+      </div>
 
 
-          </Item>
+                    </Card>
+                  )}
+                  {/* Add experiences card end */}
+                </TabPanel>
+                <TabPanel value="3">
+
+                </TabPanel>
+              </TabContext>
+            </Box>
+          </Card>
+
+
+
+
+
         </Grid>
-        <Grid item xs={12} md={4} lg={3}>
+
+
+        <Grid item xs={12} md={4} lg={3} >
           <Item>
             <div>
 

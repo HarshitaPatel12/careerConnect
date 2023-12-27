@@ -38,7 +38,7 @@ const Navbar = () => {
            {/* Add the search box */}
            <form className="form-inline my-2 my-lg-0 ml-auto col-md-4" style={{ marginRight: '28px' }}>
             <input
-              className="form-control mr-sm-2"
+              className="form-control search mr-sm-2"
               type="search"
               placeholder="Search"
               aria-label="Search"

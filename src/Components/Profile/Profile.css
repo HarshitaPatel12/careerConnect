@@ -18,6 +18,9 @@
   justify-content: 'space-between';
   margin-top: 5.5vh
 }
+.userinfo{
+  margin-left: 2.5vw;
+}
   .skill-btn{
     border: 1px solid grey;
     width: fit-content;
@@ -25,7 +28,7 @@
     font-size: 18px;
     margin-top: 2rem;
     padding: 0.5rem 1.2rem;
-    border-radius: 8px;
+    border-radius: 30px;
     background: white;
     color: var(--ligth-black);
   }
