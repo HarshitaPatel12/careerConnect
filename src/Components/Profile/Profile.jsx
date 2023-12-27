@@ -16,6 +16,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import trofe from "../../assets/MicrosoftTeams-image (7).png";
 import AddIcon from '@mui/icons-material/Add';
+import { CardActions } from "@material-ui/core";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -34,11 +35,7 @@ function Profile() {
   const [value, setValue] = React.useState('1');
   const [showAddSkill, setShowAddSkill] = useState(false);
   const [skill, setSkill] = useState("")
-  const [experiences, setExperiences] = useState([
-    { title: "Job Title 1", company: "Company 1", year: "Year 1" },
-    { title: "Job Title 2", company: "Company 2", year: "Year 2" },
-    // Add more experiences as needed
-  ]);
+  const [experiences, setExperiences] = useState("");
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -48,7 +45,7 @@ function Profile() {
   const handleSkill = (e) => {
     setSkill(e.target.value)
   }
-  console.log(skill, "---");
+
 
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: '#ddccb03b', height: "100vh", color: "black" }}>
@@ -74,7 +71,7 @@ function Profile() {
               </div>
               <CardContent>
                 <Typography variant="subtitle1" component="div" sx={{ display: 'flex', }}>
-                  <span className="pt-5 fw-bold username "> name</span>
+                  <span className="fw-bold username "> name</span>
                   {/* <button type="button" className="btn btn-secondary">Edit</button> */}
                 </Typography>
               </CardContent>
