@@ -1,132 +1,14 @@
-
-/* .navbar */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  height: 50px;
-  border-bottom: 1px solid #ccc; /* Replace with the appropriate color */
-  position: sticky;
-  top: 0;
-  background-color: #fff; /* Replace with the appropriate color */
-  color: #333; /* Replace with the appropriate color */
-  z-index: 999;
-}
-
-/* .navbar .left */
-.navbar .left {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-/* .navbar .left span */
-.navbar .left span {
-  font-weight: bold;
-  font-size: 20px;
-  color: #333; /* Replace with the appropriate color */
-}
-
-/* .navbar .left .search */
-.navbar .left .search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid #ccc; /* Replace with the appropriate color */
-  border-radius: 5px;
-  padding: 5px;
-}
-
-/* .navbar .left .search input */
-.navbar .left .search input {
-  border: none;
-  width: 500px;
-  background-color: transparent;
-  color: #333; /* Replace with the appropriate color */
-
-  /* Media Queries */
-}
-
-/* .navbar .right */
-.navbar .right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-/* Media Query for .navbar .right */
-@media screen and (max-width: 767px) {
-  .navbar .right {
-    display: none;
-  }
-}
-
-/* .navbar .right .user */
-.navbar .right .user {
+.user {
   display: flex;
   align-items: center;
   gap: 10px;
   font-weight: 500;
 
-  /* Media Query for .navbar .right .user */
 }
-
-/* Media Query for .navbar .right .user img and span */
-@media screen and (max-width: 767px) {
-  .navbar .right .user img,
-  .navbar .right .user span {
-    display: none;
-  }
+.chat_profile{
+  border-radius: 22em;
+  height: 43px;
 }
-
-/* .navbar .right .user img */
-.navbar .right .user img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* .navbar .right .user span */
-.navbar .right .user span {
-  /* Add appropriate styles */
-}
-
-/* .navbar img.cclogo */
-.navbar img.cclogo {
-  height: 50px;
-}
-
-/* Add these styles for dark mode */
-.dark-mode .navbar {
-  background-color: #333;
-  color: #fff;
-  /* Add other dark mode styles */
-}
-
-/* .dark-mode .navbar .left .search input */
-.dark-mode .navbar .left .search input {
-  color: #fff;
-}
-
-/* .dark-mode .navbar .right .user span */
-.dark-mode .navbar .right .user span {
-  color: #fff;
-}
-
-/* .dark-mode .navbar img.cclogo */
-.dark-mode .navbar img.cclogo {
-  /* Add styles for dark mode logo */
-}
-/* Light mode styles */
-body {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
+ .form-control {
+border-radius: 3.25rem;
+ }

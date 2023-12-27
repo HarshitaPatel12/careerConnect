@@ -49,7 +49,7 @@ function Profile() {
 
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: '#ddccb03b', height: "100vh", color: "black" }}>
-      {/* <Navbar /> */}
+      <Navbar />
       <Grid container spacing={3} sx={{ display: 'flex', justifyContent: 'center', marginTop: '0vh' }}>
         <Grid item xs={12} md={8} lg={8}>
           <Item>
