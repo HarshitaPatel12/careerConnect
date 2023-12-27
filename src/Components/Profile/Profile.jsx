@@ -122,8 +122,8 @@ function Profile() {
                           <input type="text" className="form-control" value={skill} onChange={handleSkill} />
                         </div>
                         <div className="ms-auto">
-                          <button type="button" className="btn btn-success">
-                            Add
+                          <button type="button" className="btn btn-primary">
+                          Save
                           </button>
                         </div>
                       </div>
@@ -162,8 +162,8 @@ function Profile() {
                       <div className="justify-content-left d-flex">
                         <span className="fs-3 text-dark">Add Experience</span>
                         <div className="ms-auto">
-                          <button type="button" className="btn btn-success">
-                            Add
+                          <button type="button" className="btn btn-primary">
+                            Save
                           </button>
                         </div>
                       </div>
@@ -186,7 +186,7 @@ function Profile() {
               <input
                 type="text"
                 className="form-control border "
-                placeholder="First Name"
+                placeholder="Profile Headline"
               />
             </div>
            
